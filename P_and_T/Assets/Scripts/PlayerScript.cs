@@ -47,10 +47,10 @@ public class PlayerScript : MonoBehaviour
         float vertMovement = Input.GetAxis("Vertical");
         rd2d.AddForce(new Vector2(hozMovement * speed, vertMovement * speed));
 
-        if (Input.GetKeyDown("escape"))
+        /*if (Input.GetKeyDown("escape"))
         {
             Application.Quit();
-        }
+        }*/
 
         if (Input.GetKeyDown(KeyCode.D))
         {
