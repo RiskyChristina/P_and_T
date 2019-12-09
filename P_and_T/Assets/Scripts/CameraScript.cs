@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraScript : MonoBehaviour
 {
@@ -8,16 +9,15 @@ public class CameraScript : MonoBehaviour
     public GameObject Player;
 
     private Vector3 offset;
-
-
+ 
     // Start is called before the first frame update
     void Start()
     {
-        offset = transform.position - Player.transform.position; 
+        offset = transform.position - Player.transform.position;
     }
 
-    // Update is called once per frame
-    void LateUpdate()
+        // Update is called once per frame
+        void LateUpdate()
     {
         if (Input.GetKeyDown("escape"))
         {
@@ -27,4 +27,5 @@ public class CameraScript : MonoBehaviour
         transform.position = Player.transform.position + offset;
         this.transform.position = new Vector3(Player.transform.position.x, this.transform.position.y, this.transform.position.z);
     }
+
 }
